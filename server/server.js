@@ -48,12 +48,12 @@ app.use("/api/messages", messageRouter)
 
 await connectDB();
 
-// if(process.env.NODE_ENV !== "production") {
-//     server.listen(port, () => {
-//     console.log(`Server started on port ${port}`)
-// })
-// }
-// console.log("NODE_ENV is:", process.env.NODE_ENV);
+if(process.env.NODE_ENV !== "production") {
+    server.listen(port, () => {
+    console.log(`Server started on port ${port}`)
+})
+}
+console.log("NODE_ENV is:", process.env.NODE_ENV);
 
-//Export server for vercel
+// Export server for vercel
 export default server;
