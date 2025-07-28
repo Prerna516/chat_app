@@ -48,7 +48,7 @@ app.use("/api/messages", messageRouter)
 
 await connectDB();
 
-if(process.env.NODE_ENV !== "Production") {
+if(process.env.NODE_ENV !== "production") {
     server.listen(port, () => {
     console.log(`Server started on port ${port}`)
 })
