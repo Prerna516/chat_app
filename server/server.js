@@ -10,7 +10,7 @@ import messageRouter from './routes/messageRoutes.js'
 
 const app = express()
 const server = http.createServer(app)
-const port = 4000
+const port = process.env.PORT || 4000
 
 export const io = new Server(server, {
     cors: {
